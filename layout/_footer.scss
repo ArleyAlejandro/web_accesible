@@ -1,0 +1,29 @@
+footer{
+    margin: 2rem 1rem;
+    padding:1rem;
+    border-top:  2px solid var(--color-borde-h2);
+
+    nav a{
+        text-decoration: none;
+        color: var(--color-texto-1);
+        border-right: 1px solid var(--color-texto-2);
+        padding-right: 2vh;
+        margin-right: 2vh;
+        font-size: 12px;
+        font-family: arial;
+        white-space: nowrap;
+        
+        &:last-of-type{
+            border-right: none;
+        }
+    }
+
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+   footer{
+    display: flex;
+    flex-direction: column;
+   }
+}

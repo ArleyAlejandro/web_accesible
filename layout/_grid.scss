@@ -1,0 +1,452 @@
+// Tamaño ordenador
+@media (min-width: 1025px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: auto;
+    grid-column: 1 / 13;
+    grid-row: 1;
+  }
+
+  #h1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  #nav {
+    justify-self: flex-end;
+    align-self: center;
+    grid-row: 1;
+  }
+
+  // Sección de la imágen grande
+  #big-img {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+
+    grid-column: 1/13; // Columnas para posicionar la imagen y el texto
+    grid-row: 2;
+  }
+
+  // Posición de la imágen dentro de su contenedor
+  #img {
+    grid-column: 1/7;
+    grid-row: 1;
+  }
+
+  // es parte de la sección de la imágen grande, un div para agrupar el texto a la derecha
+  // El contenedor de la derecha es display grid, para ajustar el contenido, necesitaba que el boton estuviera a la derecha.
+  #big-img-div {
+    display: grid;
+
+    grid-column: 7 / 13;
+    grid-row: 1;
+  }
+
+  // Posicion de elementos dentro del contenedor de la derecha
+  #big-img-div h2 {
+    grid-column: 1 / 6;
+    grid-row: 1;
+
+    align-self: center;
+  }
+
+  // Posicion de elementos dentro del contenedor de la derecha
+  #big-img-div p:first-of-type {
+    grid-column: 1 / 6;
+    grid-row: 2;
+  }
+
+  // Posicion de elementos dentro del contenedor de la derecha
+  #big-img-div p:last-of-type {
+    grid-column: 1 / 6;
+    grid-row: 3;
+  }
+
+  // Posicion de elementos dentro del contenedor de la derecha
+  #big-img-div button {
+    grid-column: 5;
+    grid-row: 4;
+  }
+
+  // Posicion de las tarjetas dentro de su contenedor ( tarjeta 1 ) 
+  #web-design {
+    grid-column: 1/5;
+    grid-row: 3;
+  }
+
+  // Posicion de las tarjetas dentro de su contenedor ( tarjeta 2 ) 
+  #solutions {
+    grid-column: 5/9;
+    grid-row: 3;
+  }
+
+  // Posicion de las tarjetas dentro de su contenedor ( tarjeta 3 ) 
+  #testimonials {
+    grid-column: 9/13;
+    grid-row: 3;
+  }
+
+  #text {
+    grid-column: 1/10;
+    grid-row: 4;
+  }
+
+  #formulario {
+    grid-column: 10/13;
+    grid-row: 4;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-column: 1/13;
+  }
+
+  footer nav {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  footer p {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .pagina-clients {
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column: 1/13;
+    }
+
+    .flex-div {
+      grid-column: 1 / 3;
+      grid-row: 1;
+    }
+
+    section:nth-child(2) {
+      grid-column: 1/2;
+      grid-row: 2;
+    }
+
+    section:nth-child(3) {
+      grid-column: 2/3;
+      grid-row: 2;
+    }
+
+    section:nth-child(4),
+    section:nth-child(5) {
+      grid-row: 3;
+    }
+
+    aside {
+      grid-row: 1/4;
+    }
+  }
+
+  .pagina-contacts {
+    .wrapper {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-column: 1/13;
+    }
+
+    .flex-div {
+      grid-row: 1;
+      display: flex;
+    }
+
+    section {
+      grid-column: 1;
+    }
+
+    aside {
+      grid-row: 1/4;
+      grid-column: 2;
+    }
+  }
+}
+
+// Tamaño tablet
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: auto;
+    grid-column: 1 / 13;
+    grid-row: 1;
+  }
+
+  #h1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  #nav {
+    justify-self: flex-end;
+    align-self: center;
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  // Sección de la imágen grande
+  #big-img {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+
+    grid-column: 1/13; // Columnas para posicionar la imagen y el texto
+    grid-row: 2;
+  }
+
+  // Posición de la imágen dentro de su contenedor
+  #img {
+    grid-column: 1/7;
+    grid-row: 1;
+  }
+
+  // es parte de la sección de la imágen grande, un div para agrupar el texto a la derecha
+  // El contenedor de la derecha es display grid, para ajustar el contenido, necesitaba que el boton estuviera a la derecha.
+  #big-img-div {
+    display: grid;
+
+    grid-column: 7 / 13;
+    grid-row: 1;
+  }
+
+  // Posicion de elementos dentro del contenedor de la derecha
+  #big-img-div h2 {
+    grid-column: 1 / 6;
+    grid-row: 1;
+
+    align-self: center;
+  }
+
+  // Posicion de elementos dentro del contenedor de la derecha
+  #big-img-div p:first-of-type {
+    grid-column: 1 / 6;
+    color: var(--color-texto-1);
+  }
+
+  // Posicion de elementos dentro del contenedor de la derecha
+  #big-img-div p:last-of-type {
+    grid-column: 1 / 6;
+    grid-row: 3;
+    border-top: 1px solid var(--color-borde-h2);
+    color: var(--color-texto-1);
+  }
+
+  // Posicion de elementos dentro del contenedor de la derecha
+  #big-img-div button {
+    grid-column: 5;
+    grid-row: 4;
+  }
+
+  // Posicion de las tarjetas dentro de su contenedor ( tarjeta 1 ) 
+  #web-design {
+    grid-column: 1 / 7;
+    grid-row: 3;
+  }
+
+  // Posicion de las tarjetas dentro de su contenedor ( tarjeta 2 ) 
+  #solutions {
+    grid-column: 7 / 13;
+    grid-row: 3;
+  }
+
+  // Posicion de las tarjetas dentro de su contenedor ( tarjeta 3 ) 
+  #testimonials {
+    grid-column: 1 / 7;
+    grid-row: 4;
+  }
+
+  #text {
+    grid-column: 1 / 13;
+    grid-row: 5;
+  }
+
+  #formulario {
+    grid-column: 8 / 13;
+    grid-row: 4;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/13;
+    align-items: center;
+  }
+
+  footer nav {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  footer p {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .pagina-clients {
+    main {
+      min-width: 650px;
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column: 1/13;
+    }
+
+    .flex-div {
+      grid-column: 1/3;
+    }
+
+    section:nth-child(2),
+    section:nth-child(3) {
+      grid-row: 2;
+    }
+
+    section:nth-child(4),
+    section:nth-child(5) {
+      grid-row: 3;
+    }
+
+    aside {
+      grid-row: 4;
+    }
+  }
+
+  .pagina-contacts {
+    .wrapper {
+      grid-column: 1/13;
+    }
+
+    aside section ul {
+      margin: 5%;
+    }
+  }
+}
+
+// Tamaño móvil
+@media (max-width: 768px) {
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  h1 {
+    grid-column: 1;
+  }
+
+  icon-menu {
+    grid-column: 2;
+  }
+
+  #big-img-div {
+    display: grid;
+
+    grid-column: 7 / 13;
+    grid-row: 1;
+  }
+
+  // Posicion de elementos dentro del contenedor de la derecha
+  #big-img-div h2 {
+    grid-column: 1 / 6;
+    grid-row: 1;
+
+    align-self: center;
+  }
+
+  // Posicion de elementos dentro del contenedor de la derecha
+  #big-img-div p:first-of-type {
+    grid-column: 1 / 6;
+    color: var(--color-texto-1);
+  }
+
+  // Posicion de elementos dentro del contenedor de la derecha
+  #big-img-div p:last-of-type {
+    grid-column: 1 / 6;
+    grid-row: 3;
+    border-top: 1px solid var(--color-borde-h2);
+    color: var(--color-texto-1);
+  }
+
+  // Posicion de elementos dentro del contenedor de la derecha
+  #big-img-div button {
+    grid-column: 5;
+    grid-row: 4;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/13;
+    align-items: center;
+  }
+
+  .pagina-clients {
+    main {
+      min-width: 600px;
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column: 1/13;
+    }
+
+    .flex-div {
+      grid-column: 1/3;
+
+      
+
+    }
+
+    section:nth-child(2),
+    section:nth-child(3) {
+      grid-row: 2;
+    }
+
+    section:nth-child(4),
+    section:nth-child(5) {
+      grid-row: 3;
+    }
+
+    aside {
+      grid-row: 4;
+    }
+    footer{
+      margin: 0 1rem;
+    }
+    
+  }
+
+  .pagina-contacts {
+    aside section ul {
+      margin: 0 5%;
+    }
+
+    h4 {
+      margin: 0 2%;
+    }
+
+  }
+}

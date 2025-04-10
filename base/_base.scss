@@ -1,0 +1,295 @@
+// punto 2.5 del enunciado
+// He utilizado el box-sizing por defecto ( contenct-box ) .
+body {
+  background: var(--color-fondo) !important;
+  min-height: 100vh;
+  /* Asegura que el body siempre tenga al menos la altura de la ventana, sin esta propiedad
+  el body no llegaba al final de la pantalla, si se usaba gradient */
+}
+
+main {
+  min-width: 600px;
+  padding: 1rem;
+  font-family: arial;
+}
+
+div#big-img-div {
+  padding-left: 0.5rem;
+
+  h2 {
+    font-size: 27px;
+    font-weight: normal;
+    padding-bottom: 10px;
+    color: var(--color-titulo3);
+
+    span {
+      color: var(--color-titulo2);
+    }
+
+  }
+  p:first-of-type {
+    padding: 7px 0;
+  }
+  p:last-of-type {
+    padding: 20px 0;
+    border-top: 1px solid var(--color-borde-h2);
+  }
+}
+
+p {
+  font-size: 12px;
+  color: var(--color-texto-1);
+}
+
+// Estilos de la sección de la imágen grande 
+#big-img {
+  background-color: var(--color-secciones);
+  padding: 10px;
+}
+
+h2 {
+  color: var(--color-titulo);
+  padding: 1vh 0;
+  margin: 1vh 0;
+  font-size: x-large;
+  border-bottom: 2px solid var(--color-borde-h2);
+}
+
+#text {
+  p {
+    color: var(--color-texto-1);
+    padding: 1vh;
+  }
+  &:last-of-type {
+    margin-bottom: 4vh;
+  }
+  h2 {
+    font-size: 22px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+
+  // Tamaño de la imágen grande ajustado con un contenedor
+  #img img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #img img {
+    display: none;
+  }
+
+  #img {
+    background-image: url("../imágenes/Content_Slider.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+}
+
+@media (min-width: 1025px) {
+  main {
+    margin: 0 auto;
+    max-width: 1025px;
+  }
+
+  #text {
+    margin-right: 8vh;
+  }
+
+  #img {
+    background-image: url("../imágenes/Content_Slider.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #img img {
+    display: none;
+  }
+
+  .icon-menu {
+    display: none;
+  }
+
+}
+
+.pagina-clients {
+  .wrapper {
+    background-color: var(--color-secciones);
+  }
+
+  .flex-div {
+    display: flex;
+    border-bottom: 2px solid var(--color-borde-h2);
+    margin: 0 3rem 0 1rem;
+
+    h2 {
+      border: none;
+      margin-left: 1vh;
+      font-size: 22px;
+      align-self: center;
+
+    }
+  }
+
+  .img_wrapper img {
+    margin-top: 1vh;
+  }
+
+  section {
+    padding: 1vh 2vh;
+    display: grid;
+    max-width: 32vh;
+
+    div {
+      width: 300px;
+
+      img {
+        border: 10px solid var(--color-borde-h2);
+        border-radius: 11px;
+        width: 85%;
+        height: auto;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      margin: 1vh;
+      color: var(--color-titulo4);
+    }
+  }
+
+  aside {
+    h2 {
+      padding-top: 20px;
+      font-size: 19px;
+    }
+
+    h4 {
+      margin: 2vh;
+      font-size: 12px;
+    }
+
+    p {
+      font-style: italic;
+      font-family: 'century-ghotic';
+    }
+  }
+}
+
+.pagina-contacts {
+  .wrapper {
+    background-color: var(--color-secciones);
+  }
+
+  .flex-div {
+    display: grid;
+    border-bottom: 2px solid var(--color-borde-h2);
+    margin: 0 5vh 1vh 1vh;
+    grid-template-columns: 1fr 12fr;
+
+    h2 {
+      border: none;
+      font-size: 22px;
+    }
+  }
+
+  .img_wrapper img {
+    padding-top: 1vh;
+  }
+
+  section {
+    p {
+      margin: 1vh 7vh 1vh 1vh;
+    }
+
+  }
+
+  aside {
+    li {
+      list-style-type: disc;
+      color: var(--color-texto-1);
+      margin: 0.3rem;
+      font-size:12px;
+
+      &::marker {
+        color: var(--color-titulo2);
+      }
+    }
+
+    section {
+      &:nth-of-type(1) h2 {
+        margin: 11px 1vh;
+      }
+
+      &:nth-of-type(2) h2 {
+        margin: 19px 1vh;
+      }
+
+      &:nth-of-type(3) {
+        h2 {
+          margin: 19px 1vh;
+        }
+
+        p {
+          font-style: italic;
+        }
+
+        h4 {
+          font-size: 12px;
+        }
+      }
+
+      h2 {
+        font-size: 19px
+      }
+    }
+
+  }
+
+  .label-field {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 2vh 0;
+
+    input {
+      grid-column: 2;
+      max-width: 70%;
+      min-height: 4vh;
+      background-color: var(--color-texto-4);
+      border: none;
+    }
+
+    label {
+      grid-row: 1;
+      margin-left: 5vh;
+      color: var(--color-titulo4);
+    }
+
+    textarea {
+      max-width: 80%;
+      min-height: 17vh;
+      background-color: var(--color-texto-4);
+      border: none;
+    }
+
+    button {
+      grid-column: 2;
+    }
+  }
+
+  footer {
+    margin: 3rem 1rem;
+  }
+}
+
+.label{ 
+    font-family: arial;
+    font-weight: bold;
+    font-size:12px;
+}

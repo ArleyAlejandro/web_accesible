@@ -1,0 +1,141 @@
+.icon-contrast {
+  color: var(--color-titulo3);
+  cursor: pointer;
+}
+
+.icon-menu {
+  color: var(--color-titulo3);
+}
+
+#nav a {
+  color: var(--color-titulo);
+}
+
+@media (max-width: 768px) {
+
+  div#icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  div#icons span {
+    cursor: pointer;
+    align-self: center;
+  }
+
+  // Icono de menú de navegación
+  span.icon-menu {
+    justify-self: end;
+    font-size: 150%;
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  //Icono de cambio a modo oscuro
+  span.icon-contrast {
+    grid-column: 1;
+    justify-self: normal;
+  }
+
+  #nav {
+    display: none;
+    grid-column: 1 / 3;
+    grid-row: 2;
+  }
+
+  // Muestra el menú cuando tiene la clase "visible"
+  #nav.visible {
+    display: block;
+  }
+
+  // Clase adicional para ocultar el menú al pulsar icono 
+  .hidden {
+    display: none;
+  }
+
+  #lista {
+    background-color: var(--color-lista-movil);
+  }
+
+  #lista li {
+    text-align: center;
+    padding: 1vh;
+  }
+
+  #lista li:hover {
+    transition: 1s
+  }
+
+
+  #lista a {
+    text-align: center;
+    text-decoration: none;
+    color: var(--blue-4);
+  }
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+
+  #nav li {
+    text-align: center;
+    margin: 0 5px;
+  }
+
+  #nav a {
+    font-family: arial;
+    text-decoration: none;
+    font-size: 12px;
+    white-space: nowrap;
+    color: var(--color-titulo4);
+  }
+
+  #nav a:hover {
+    border: 1px solid var(--color-negro);
+    padding: 7px 16px;
+    background-image: var(--color-hover);
+    color: var(--color-blanco) !important;
+  }
+
+  #icons {
+    align-self: center;
+  }
+}
+
+@media (min-width: 1025px) {
+  #lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+
+  #nav li {
+    margin: 0 10px;
+  }
+
+  #nav a {
+    text-decoration: none;
+    color: var(--color-titulo4);
+    font-size: 12px;
+  }
+
+  #nav a:hover {
+    border: 1px solid var(--color-negro);
+    padding: 7px 16px;
+    background-image: var(--color-hover);
+    color: var(--color-blanco) !important;
+  }
+
+  #icons {
+    align-self: center;
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
