@@ -4,7 +4,7 @@ footer{
     border-top:  2px solid var(--color-borde-h2);
 
     nav a{
-        text-decoration: none;
+        text-decoration: underline;
         color: var(--color-texto-1);
         border-right: 1px solid var(--color-texto-2);
         padding-right: 2vh;
@@ -16,6 +16,15 @@ footer{
         &:last-of-type{
             border-right: none;
         }
+
+        &:focus {
+            color: var(--color-focus); 
+            transition: background-color 0.3s ease, color 0.3s ease; 
+            font-weight: bold;
+            padding: 0.3rem;
+            border: 3px solid var(--color-focus) ;
+
+          }
     }
 
 

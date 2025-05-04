@@ -9,10 +9,15 @@
 
 #nav a {
   color: var(--color-titulo);
+
+  &:focus {
+    outline: 2px solid var(--color-hover); // Borde visible
+    outline-offset: 4px; // Separación del borde respecto al enlace
+    border-radius: 4px; // Bordes redondeados
+  }
 }
 
 @media (max-width: 768px) {
-
   div#icons {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -48,7 +53,7 @@
     display: block;
   }
 
-  // Clase adicional para ocultar el menú al pulsar icono 
+  // Clase adicional para ocultar el menú al pulsar icono
   .hidden {
     display: none;
   }
@@ -63,16 +68,14 @@
   }
 
   #lista li:hover {
-    transition: 1s
+    transition: 1s;
   }
-
 
   #lista a {
     text-align: center;
     text-decoration: none;
     color: var(--blue-4);
   }
-
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -124,6 +127,14 @@
     text-decoration: none;
     color: var(--color-titulo4);
     font-size: 12px;
+
+    &:focus {
+      color: var(--color-focus); 
+      transition: background-color 0.3s ease, color 0.3s ease; 
+      font-weight: bolder;
+      padding: 0.3rem;
+      border: 3px solid var(--color-focus) ;
+    }
   }
 
   #nav a:hover {

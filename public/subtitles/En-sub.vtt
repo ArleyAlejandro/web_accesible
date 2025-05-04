@@ -1,0 +1,97 @@
+WEBVTT
+
+00:00:10.000 --> 00:00:14.000
+Hello, in this video, I will be initializing a simple Angular application
+
+00:00:14.000 --> 00:00:17.000
+And I will show the steps I am executing
+
+00:00:17.000 --> 00:00:22.000
+First, I have a prepared folder to create my application
+
+00:00:22.000 --> 00:00:25.000
+I will open it with Visual Studio Code
+
+00:00:29.500 --> 00:00:31.000
+I will open a terminal
+
+00:00:31.000 --> 00:00:35.000
+And I will run the **ng new** command from Angular CLI
+
+00:00:35.000 --> 00:00:39.000
+Which is used to create a new Angular application
+
+00:00:40.000 --> 00:00:42.000
+I will give it a name 
+
+00:00:44.000 --> 00:00:51.000
+Then it will ask me: Do I want to use CSS or SASS? I will choose CSS
+
+00:00:51.000 --> 00:00:53.000
+Here, I will select: no 
+
+00:00:54.000 --> 00:00:57.000
+Then I have to wait for the packages to install
+
+00:00:58.000 --> 00:01:00.000
+It will take a while, so I will pause the video
+
+00:01:00.500 --> 00:01:03.000
+Alright, after the installation is complete 
+
+00:01:03.000 --> 00:01:05.000
+What I am going to do is... 
+
+00:01:05.000 --> 00:01:07.700
+You can see that all Angular packages are here
+
+00:01:07.700 --> 00:01:12.000
+What I will do is open the main folder
+
+00:01:13.000 --> 00:01:21.000
+And I will create a new component using the **ng generate component** command
+
+00:01:24.000 --> 00:01:28.000
+I enter the path where I want it, it will be created inside src/app 
+
+00:01:29.000 --> 00:01:34.000
+And I enter the component name, this should create the different files for this component
+
+00:01:34.500 --> 00:01:36.000
+You can see it has been created
+
+00:01:36.500 --> 00:01:45.000 
+After creating the list component, the next step is to run the application using **ng serve**
+
+00:01:45.300 --> 00:01:46.000
+Now I wait for it to load... 
+
+00:01:48.000 --> 00:01:55.000
+If I open it, I can see the default HTML structure of the application in the browser
+
+00:01:55.000 --> 00:02:03.000
+What I will do is remove this and add my List component to show that it works 
+
+00:02:03.800 --> 00:02:08.000
+For that, I just need the component name, which is 'app-lista'
+
+00:02:08.000 --> 00:02:14.000
+I need to import it in my app.component.ts 
+
+00:02:16.000 --> 00:02:23.000
+And then I can simply add the selector name I had before
+
+00:02:23.500 --> 00:02:27.000
+(I had done a copy-paste, and Angular wasn't importing it automatically :v )
+
+00:02:32.000 --> 00:02:33.000
+I don't know why it's giving me an error...
+
+00:02:38.000 --> 00:02:39.000
+Alright, it's fixed now
+
+00:02:39.500 --> 00:02:45.000
+And this should display the HTML of my List component 
+
+00:02:45.500 --> 00:02:48.000
+That's it! Thanks for watching the video <3.

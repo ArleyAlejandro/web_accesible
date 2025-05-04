@@ -1,106 +1,163 @@
 <!DOCTYPE html>
-<html lang="en" >
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CONTACT US</title>
-    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/main.min.css" />
     <script src="home.js" defer></script>
-</head>
+  </head>
 
-<body class="pagina-contacts">
+  <body class="pagina-contacts">
     <main>
-        <header id="header">
-            <h1 id="h1">INF<span>O</span>TECH
-                <img src="imágenes/Eye_O.png" alt="orange-circle" id="orange-circle">
-            </h1>
-            <div id="icons">
-                <span class="icon-menu">&#xe9bd;</span>
-                <span class="icon-contrast">&#xe9d5;</span>
-            </div>
-            <nav id="nav">
-                <ul id="lista">
-                    <li><a href="./home.html">HOME</a></li>
-                    <li><a href="./clients.html">CLIENTS</a></li>
-                    <li><a href="#">CONTACT US</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="wrapper">
-            <div class="flex-div">
-                <div class="img_wrapper">
-                    <img src="./imágenes/Contact-Us-Image.png" alt="Contact img">
-                </div>
-                <h2>Contact Us</h2>
-            </div>
-            <section>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pulvinar nisi eu enim facilisis dapibus.
-                    Duis viverra turpis vitae dui tincidunt eleifend. Etiam sodales, neque in dignissim dictum, dui
-                    libero
-                    dictum orci, vel cursus felis velit vitae dui.</p>
-                <form action="#" method="post">
-                    <div class="label-field">
-                        <input type="text" name="name" id="name" autofocus="autofocus">
-                        <label for="name" class="label">Name</label>
-                    </div>
-                    <div class="label-field">
-                        <input type="text" name="email" id="email">
-                        <label for="email" class="label">Email - ID</label>
-                    </div>
-                    <div class="label-field">
-                        <input type="text" name="company" id="company">
-                        <label for="company" class="label">Company Name</label>
-                    </div>
-                    <div class="label-field">
-                        <input type="text" name="subject" id="subject">
-                        <label for="subject" class="label">Subject</label>
-                    </div>
-                    <div class="label-field">
-                        <textarea id="message" name="message" maxlength="255"></textarea>
-                        <label for="message" class="label">Message</label>
-                    </div>
-                    <div class="label-field"><button class="button">Submit</button></div>
-                </form>
-            </section>
-            <aside>
-                <section>
-                    <h2>Get in Touch</h2>
-                    <ul>
-                        <li>9839 Lorem Ipsum</li>
-                        <li>India, Bangalore</li>
-                        <li>Asia, India</li>
-                        <li>Telephone: +91 - 1234567890</li>
-                        <li>Email: contact@design3edge.com</li>
-                    </ul>
-                </section>
-                <section>
-                    <h2>Follow us on</h2>
-                    <div class="social">
-                        <img src="imágenes/Twitter.png" alt="Twitter">
-                        <img src="imágenes/Facebook.png" alt="Facebook">
-                        <img src="imágenes/LinkedIn.png" alt="LinkedIn">
-                    </div>
-                </section>
-                <section>
-                    <h2>Testimonials</h2>
-                    <p>Talk to us if you are looking for business savvy online solutions rather than possibilities of
-                        technology.</p>
-                    <h4>- Design3edge.com</h4>
-                </section>
-            </aside>
-            <footer>
-                <nav>
-                    <a href="./home.html">HOME</a>
-                    <a href="#">ABOUT US</a>
-                    <a href="#">SOLUTIONS</a>
-                    <a href="./clients.html">CLIENTS</a>
-                    <a href="#">CONTACT US</a>
-                </nav>
-                <p class="copyright">© Copyright Your <span>Site Name. Dot Com.</span> All Rights Reserved </p>
-            </footer>
+      <header id="header">
+        <h1 id="h1">
+          INF<span>O</span>TECH
+          <img
+            src="imágenes/Eye_O.png"
+            alt="Orange circle logo"
+            id="orange-circle"
+          />
+        </h1>
+        <div id="icons">
+          <span class="icon-menu" role="button" tabindex="0" aria-label="Toggle menu">&#xe9bd;</span>
+                <span class="icon-contrast" role="button" tabindex="0" aria-label="Toggle high contrast mode">&#xe9d5;</span>
         </div>
+        <nav id="nav" aria-label="Main Navigation">
+          <ul id="lista">
+            <li><a href="./home.html">HOME</a></li>
+            <li><a href="./clients.html">CLIENTS</a></li>
+            <li><a href="#">CONTACT US</a></li>
+            <li><a href="./video.html">VIDEO</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="wrapper">
+        <div class="flex-div">
+          <div class="img_wrapper">
+            <img src="./imágenes/Contact-Us-Image.png" alt="Contact Us illustration" />
+          </div>
+          <h2>Contact Us</h2>
+        </div>
+        <section>
+          <p lang="la">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+            pulvinar nisi eu enim facilisis dapibus. Duis viverra turpis vitae
+            dui tincidunt eleifend. Etiam sodales, neque in dignissim dictum,
+            dui libero dictum orci, vel cursus felis velit vitae dui.
+          </p>
+          <form action="#" method="post">
+            <fieldset>
+              <legend>Contact Information</legend>
+              <div class="label-field">
+                <label for="name" class="label">Name</label>
+                <input type="text" name="name" id="name" autofocus="autofocus" required />
+              </div>
+              <div class="label-field">
+                <label for="email" class="label">Email - ID</label>
+                <input type="email" name="email" id="email" required />
+              </div>
+              <div class="label-field">
+                <label for="company" class="label">Company Name</label>
+                <input type="text" name="company" id="company" />
+              </div>
+              <div class="label-field">
+                <label for="subject" class="label">Subject</label>
+                <input type="text" name="subject" id="subject" />
+              </div>
+              <div class="label-field">
+                <label for="message" class="label">Message</label>
+                <textarea id="message" name="message" maxlength="255" required></textarea>
+              </div>
+            </fieldset>
+            <div class="label-field">
+              <button class="button" type="submit">Submit</button>
+            </div>
+          </form>
+        </section>
+        <aside>
+          <section>
+            <h2>Get in Touch</h2>
+            <ul>
+              <li lang="la">9839 Lorem Ipsum</li>
+              <li>India, Bangalore</li>
+              <li>Asia, India</li>
+              <li>Telephone: +91 - 1234567890</li>
+              <li>Email: contact@design3edge.com</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Follow us on</h2>
+            <div class="social">
+              <img src="imágenes/Twitter.png" alt="Follow us on Twitter" />
+              <img src="imágenes/Facebook.png" alt="Follow us on Facebook" />
+              <img src="imágenes/LinkedIn.png" alt="Follow us on LinkedIn" />
+            </div>
+          </section>
+          <section>
+            <h2>Testimonials</h2>
+            <p>
+              Talk to us if you are looking for business savvy online solutions
+              rather than possibilities of technology.
+            </p>
+            <h4>- Design3edge.com</h4>
+          </section>
+        </aside>
+        <section>
+          <table aria-describedby="info">
+            <caption>
+              Our opening hours
+            </caption>
+            <thead>
+              <tr>
+                <td></td>
+                <th id="mon">Monday</th>
+                <th id="tue">Tuesday</th>
+                <th id="wed">Wednesday</th>
+                <th id="thu">Thursday</th>
+                <th id="fri">Friday</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th id="h1">09:00 - 11:00</th>
+                <td headers="h1 mon">Closed</td>
+                <td headers="h1 tue">Open</td>
+                <td headers="h1 wed">Open</td>
+                <td headers="h1 thu">Closed</td>
+                <td headers="h1 fri">Closed</td>
+              </tr>
+              <tr>
+                <th id="h2">11:00 - 13:00</th>
+                <td headers="h2 mon">Open</td>
+                <td headers="h2 tue">Open</td>
+                <td headers="h2 wed">Closed</td>
+                <td headers="h2 thu">Closed</td>
+                <td headers="h2 fri">Closed</td>
+              </tr>
+            </tbody>
+          </table>
+          <p id="info">
+            This table shows the weekly hours of our store in the morning. It is
+            only open in the morning, in the afternoons it is closed.
+          </p>
+        </section>
+        <section>
+          <img class="contact-img" src="./imágenes/albert-einstein-retrato-scaled.webp" alt="Albert Einstein portrait" style="width: 100%;" />
+        </section>
+        <footer>
+          <nav aria-label="Footer Navigation">
+            <a href="./home.html">HOME</a>
+            <a href="./clients.html">CLIENTS</a>
+            <a href="#">CONTACT US</a>
+            <a href="./video.html">VIDEO</a>
+          </nav>
+          <p class="copyright">
+            © Copyright Your <span>Site Name. Dot Com.</span> All Rights
+            Reserved
+          </p>
+        </footer>
+      </div>
     </main>
-</body>
-
+  </body>
 </html>

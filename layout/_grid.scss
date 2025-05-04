@@ -102,6 +102,18 @@
   #formulario {
     grid-column: 10/13;
     grid-row: 4;
+
+    label{
+      color: var(--color-titulo2);
+    }
+
+    input:focus{
+      color: var(--color-botones);
+      transition: background-color 0.3s ease, color 0.3s ease; 
+      font-weight: bold;
+      background-color: gray;
+      border: 1px solid var( --color-focus) ;
+    }
   }
 
   footer {

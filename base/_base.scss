@@ -25,7 +25,6 @@ div#big-img-div {
     span {
       color: var(--color-titulo2);
     }
-
   }
   p:first-of-type {
     padding: 7px 0;
@@ -41,7 +40,7 @@ p {
   color: var(--color-texto-1);
 }
 
-// Estilos de la sección de la imágen grande 
+// Estilos de la sección de la imágen grande
 #big-img {
   background-color: var(--color-secciones);
   padding: 10px;
@@ -68,10 +67,7 @@ h2 {
   }
 }
 
-
-
 @media (max-width: 768px) {
-
   // Tamaño de la imágen grande ajustado con un contenedor
   #img img {
     height: auto;
@@ -89,7 +85,6 @@ h2 {
     background-repeat: no-repeat;
     background-size: cover;
   }
-
 }
 
 @media (min-width: 1025px) {
@@ -115,7 +110,6 @@ h2 {
   .icon-menu {
     display: none;
   }
-
 }
 
 .pagina-clients {
@@ -133,7 +127,6 @@ h2 {
       margin-left: 1vh;
       font-size: 22px;
       align-self: center;
-
     }
   }
 
@@ -158,7 +151,7 @@ h2 {
     }
 
     a {
-      text-decoration: none;
+      text-decoration: underline;
       margin: 1vh;
       color: var(--color-titulo4);
     }
@@ -177,7 +170,7 @@ h2 {
 
     p {
       font-style: italic;
-      font-family: 'century-ghotic';
+      font-family: "century-ghotic";
     }
   }
 }
@@ -207,7 +200,6 @@ h2 {
     p {
       margin: 1vh 7vh 1vh 1vh;
     }
-
   }
 
   aside {
@@ -215,7 +207,7 @@ h2 {
       list-style-type: disc;
       color: var(--color-texto-1);
       margin: 0.3rem;
-      font-size:12px;
+      font-size: 12px;
 
       &::marker {
         color: var(--color-titulo2);
@@ -246,10 +238,9 @@ h2 {
       }
 
       h2 {
-        font-size: 19px
+        font-size: 19px;
       }
     }
-
   }
 
   .label-field {
@@ -263,6 +254,14 @@ h2 {
       min-height: 4vh;
       background-color: var(--color-texto-4);
       border: none;
+
+      &:focus {
+        color: var(--color-botones);
+        transition: background-color 0.3s ease, color 0.3s ease;
+        font-weight: bold;
+        background-color: gray;
+        border: 1px solid var(--color-focus);
+      }
     }
 
     label {
@@ -276,6 +275,14 @@ h2 {
       min-height: 17vh;
       background-color: var(--color-texto-4);
       border: none;
+
+      &:focus {
+        color: var(--color-botones);
+        transition: background-color 0.3s ease, color 0.3s ease;
+        font-weight: bold;
+        background-color: gray;
+        border: 1px solid var(--color-focus);
+      }
     }
 
     button {
@@ -286,10 +293,88 @@ h2 {
   footer {
     margin: 3rem 1rem;
   }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto-3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  caption {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-titulo);
+    margin-bottom: 1rem;
+  }
+
+  thead th {
+    background-color: var(--blue-1);
+    color: var(--color-blanco);
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    border: 1px solid var(--color-borde-h2);
+  }
+
+  tbody th {
+    background-color: var(--blue-3);
+    color: var(--color-blanco);
+    padding: 1rem;
+    text-align: left;
+    font-size: 1rem;
+    border: 1px solid var(--color-borde-h2);
+  }
+
+  tbody td {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    border: 1px solid var(--color-borde-h2);
+    color: var(--color-texto-2);
+  }
+
+  tbody td[headers*="mon"],
+  tbody td[headers*="fri"] {
+    background-color: var(
+      --color-cartas-fondo-h3
+    ); 
+  }
+
+  tbody td[headers*="tue"],
+  tbody td[headers*="wed"],
+  tbody td[headers*="thu"] {
+    background-color: var(--blue-4);
+    color: var(--color-negro);
+  }
+
+  tbody td:focus {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+    transition: outline 0.3s ease;
+  }
+
+  p#info {
+    font-size: 0.9rem;
+    color: var(--color-texto-1);
+    margin-top: 1rem;
+  }
 }
 
-.label{ 
-    font-family: arial;
-    font-weight: bold;
-    font-size:12px;
+.label {
+  font-family: arial;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.focus-link:focus {
+  color: var(--color-focus);
+  transition: transform 0.3s ease, color 0.3s ease;
+  font-weight: bold;
+}
+
+.contact-img{
+  width: 100%;
 }

@@ -1,19 +1,20 @@
 @charset "UTF-8";
 :root {
   --color-fondo: linear-gradient(#e4e4e4, #fdfdfd);
-  --color-gradient2:linear-gradient(to bottom, #F3CFA6, #EF9F46);
-  --color-gradient3:linear-gradient(to bottom, #a6abf3, #4649ef);
-  --color-gradient4:linear-gradient(to bottom, white, #e4e4e4);
+  --color-gradient2: linear-gradient(to bottom, #F3CFA6, #EF9F46);
+  --color-gradient3: linear-gradient(to bottom, #a6abf3, #4649ef);
+  --color-gradient4: linear-gradient(to bottom, white, #e4e4e4);
   --color-naranja: #EC8A1B;
+  --color-naranja-acc: #685137;
   --color-blanco: white;
   --color-negro: black;
   --color-cartas-fondo-h3: #ebebeb;
-  --color-cartas-h3:#ececec;
+  --color-cartas-h3: #ececec;
   --color-boton-fondo: #e6e6e6;
   --color-borde-h2: #E0E1E1;
   --color-boton-bordes: #ccc;
-  --color-cartas-texto: #A3A3A3;
-  --color-texto-1: #9E9FA0;
+  --color-cartas-texto: #404040;
+  --color-texto-1: #545454;
   --color-texto-2: #666;
   --color-texto-3: #666666;
   --color-texto-4: #efefef;
@@ -24,6 +25,8 @@
   --blue-2: #3282B8;
   --blue-3: #3E6181;
   --blue-4: #BBE1FA;
+  --color-focus-light: black;
+  --color-focus-dark: white;
 }
 :root.dark {
   --color-fondo: var(--oscuro);
@@ -33,18 +36,22 @@
   --color-titulo4: var(--blue-4);
   --color-titulo5: var(--oscuro);
   --color-secciones: var(--blue-1);
-  --color-hover:var(--color-gradient3);
-  --color-titulo-cartas:var(--blue-4);
+  --color-hover: var(--color-gradient3);
+  --color-titulo-cartas: var(--blue-4);
+  --color-focus: var(--color-focus-dark);
+  --color-botones: var(--color-focus-light);
 }
 :root.light {
-  --color-titulo: var(--color-naranja);
-  --color-titulo2: var(--color-naranja);
+  --color-titulo: var(--color-naranja-acc);
+  --color-titulo2: var(--color-naranja-acc);
   --color-titulo3: var(--color-negro);
   --color-titulo4: var(--color-negro);
   --color-titulo5: var(--color-cartas-texto);
   --color-secciones: var(--color-blanco);
-  --color-hover:var(--color-gradient2);
-  --color-titulo-cartas:var(--color-cartas-h3);
+  --color-hover: var(--color-gradient2);
+  --color-titulo-cartas: var(--color-cartas-h3);
+  --color-focus: var(--color-focus-light);
+  --color-botones: var(--color-focus-dark);
 }
 
 /* 
@@ -241,7 +248,7 @@ h2 {
   height: auto;
 }
 .pagina-clients section a {
-  text-decoration: none;
+  text-decoration: underline;
   margin: 1vh;
   color: var(--color-titulo4);
 }
@@ -316,6 +323,13 @@ h2 {
   background-color: var(--color-texto-4);
   border: none;
 }
+.pagina-contacts .label-field input:focus {
+  color: var(--color-botones);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: bold;
+  background-color: gray;
+  border: 1px solid var(--color-focus);
+}
 .pagina-contacts .label-field label {
   grid-row: 1;
   margin-left: 5vh;
@@ -327,17 +341,91 @@ h2 {
   background-color: var(--color-texto-4);
   border: none;
 }
+.pagina-contacts .label-field textarea:focus {
+  color: var(--color-botones);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: bold;
+  background-color: gray;
+  border: 1px solid var(--color-focus);
+}
 .pagina-contacts .label-field button {
   grid-column: 2;
 }
 .pagina-contacts footer {
   margin: 3rem 1rem;
 }
+.pagina-contacts table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background-color: var(--color-fondo);
+  color: var(--color-texto-3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.pagina-contacts caption {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-titulo);
+  margin-bottom: 1rem;
+}
+.pagina-contacts thead th {
+  background-color: var(--blue-1);
+  color: var(--color-blanco);
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  border: 1px solid var(--color-borde-h2);
+}
+.pagina-contacts tbody th {
+  background-color: var(--blue-3);
+  color: var(--color-blanco);
+  padding: 1rem;
+  text-align: left;
+  font-size: 1rem;
+  border: 1px solid var(--color-borde-h2);
+}
+.pagina-contacts tbody td {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  border: 1px solid var(--color-borde-h2);
+  color: var(--color-texto-2);
+}
+.pagina-contacts tbody td[headers*=mon],
+.pagina-contacts tbody td[headers*=fri] {
+  background-color: var(--color-cartas-fondo-h3);
+}
+.pagina-contacts tbody td[headers*=tue],
+.pagina-contacts tbody td[headers*=wed],
+.pagina-contacts tbody td[headers*=thu] {
+  background-color: var(--blue-4);
+  color: var(--color-negro);
+}
+.pagina-contacts tbody td:focus {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+  transition: outline 0.3s ease;
+}
+.pagina-contacts p#info {
+  font-size: 0.9rem;
+  color: var(--color-texto-1);
+  margin-top: 1rem;
+}
 
 .label {
   font-family: arial;
   font-weight: bold;
   font-size: 12px;
+}
+
+.focus-link:focus {
+  color: var(--color-focus);
+  transition: transform 0.3s ease, color 0.3s ease;
+  font-weight: bold;
+}
+
+.contact-img {
+  width: 100%;
 }
 
 @font-face {
@@ -367,6 +455,11 @@ h2 {
 
 #nav a {
   color: var(--color-titulo);
+}
+#nav a:focus {
+  outline: 2px solid var(--color-hover);
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
 @media (max-width: 768px) {
@@ -458,6 +551,13 @@ h2 {
     color: var(--color-titulo4);
     font-size: 12px;
   }
+  #nav a:focus {
+    color: var(--color-focus);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bolder;
+    padding: 0.3rem;
+    border: 3px solid var(--color-focus);
+  }
   #nav a:hover {
     border: 1px solid var(--color-negro);
     padding: 7px 16px;
@@ -544,6 +644,16 @@ h2 {
   #formulario {
     grid-column: 10/13;
     grid-row: 4;
+  }
+  #formulario label {
+    color: var(--color-titulo2);
+  }
+  #formulario input:focus {
+    color: var(--color-botones);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+    background-color: gray;
+    border: 1px solid var(--color-focus);
   }
   footer {
     display: grid;
@@ -832,7 +942,7 @@ footer {
   border-top: 2px solid var(--color-borde-h2);
 }
 footer nav a {
-  text-decoration: none;
+  text-decoration: underline;
   color: var(--color-texto-1);
   border-right: 1px solid var(--color-texto-2);
   padding-right: 2vh;
@@ -843,6 +953,13 @@ footer nav a {
 }
 footer nav a:last-of-type {
   border-right: none;
+}
+footer nav a:focus {
+  color: var(--color-focus);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: bold;
+  padding: 0.3rem;
+  border: 3px solid var(--color-focus);
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -888,6 +1005,12 @@ footer nav a:last-of-type {
   box-shadow: var(--color-boton-box-shadow);
   width: 20vh;
   height: 1.5rem;
+}
+.button:focus, #formulario button:focus {
+  outline: 3px solid var(--color-focus);
+  color: var(--color-botones);
+  font-weight: bold;
+  background-color: gray;
 }
 
 #formulario button {
@@ -940,9 +1063,18 @@ footer nav a:last-of-type {
   grid-column: 2;
   justify-self: right;
   margin-right: 3vh;
-  text-decoration: none;
+  text-decoration: underline;
   color: var(--color-titulo2);
   font-size: 12px;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 3px;
+  box-sizing: border-box;
+}
+.cards a:focus {
+  color: var(--color-focus);
+  transition: transform 0.3s ease, color 0.3s ease;
+  font-weight: bold;
 }
 
 #solutions {

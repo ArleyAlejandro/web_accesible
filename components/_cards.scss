@@ -33,15 +33,24 @@
         p{
             grid-column: 2;
         }
-        a{
+        a {
             font-family: arial;
             grid-column: 2;
             justify-self: right;
-            margin-right: 3vh; 
-            text-decoration: none; 
+            margin-right: 3vh;
+            text-decoration: underline;
             color: var(--color-titulo2);
             font-size: 12px;
-        }
+            height: min-content;
+            padding: 3px;
+            box-sizing: border-box; 
+            
+            &:focus {
+              color: var(--color-focus);
+              transition: transform 0.3s ease, color 0.3s ease;
+              font-weight: bold;
+            }
+          }
 }
 
 #solutions{

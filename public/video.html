@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIDEO</title>
+    <link rel="stylesheet" href="video-styles.css" />
+    <!-- Dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+
+    <!-- CSS de Able Player -->
+    <link rel="stylesheet" href="./ableplayer.min.css" />
+    <script src="./ableplayer.min.js"></script>
+   </head> 
+  <body>
+    <header id="header">
+      <nav id="nav" aria-label="Main Navigation">
+        <ul id="lista">
+          <li><a href="./home.html">HOME</a></li>
+          <li><a href="#">CLIENTS</a></li>
+          <li><a href="./contact.html">CONTACT US</a></li>
+          <li><a href="./video.html">VIDEO</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="bienvenida">
+      <h1>Bienvenidos</h1>
+      <p>Explora nuestra web con un diseño dinámico.</p>
+    </div>
+
+    <div class="video-container">
+      <div class="overlay"></div>
+      <video id="video1" data-able-player preload="auto" width="480" height="360">
+        <track
+          src="./subtitles/Es-sub.vtt"
+          kind="captions"
+          srclang="es"
+          label="Español"
+          default
+        />
+        <track
+          src="./subtitles/En-sub.vtt"
+          kind="captions"
+          srclang="en"
+          label="English"
+        />
+        <source src="./videos/Angular-Tutorial.mp4" type="video/mp4" />
+        Tu navegador no soporta el elemento de video.
+      </video>
+    </div>
+    
+
+    <div class="transcripcion">
+      <section id="transcripcion-es">
+        <p>
+          Hola, en este video voy a inicializar una aplicación sencilla en
+          Angular.
+        </p>
+        <p>Y voy a mostrar los pasos que estoy ejecutando.</p>
+        <p>Primero, tengo una carpeta preparada para crear mi aplicación.</p>
+        <p>La abriré con Visual Studio Code.</p>
+        <p>Voy a abrir un terminal.</p>
+        <p>
+          Y ejecutaré el comando <code>ng new</code> de Angular CLI, que se usa
+          para crear una nueva aplicación Angular.
+        </p>
+        <p>Le pondré un nombre.</p>
+        <p>Luego me preguntará: ¿quiero usar CSS o SASS? Elegiré CSS.</p>
+        <p>Aquí, seleccionaré: no.</p>
+        <p>Luego tengo que esperar a que se instalen los paquetes.</p>
+        <p>Tardará un poco, así que voy a pausar el video.</p>
+        <p>
+          Bien, después de que se haya completado la instalación, lo que voy a
+          hacer es...
+        </p>
+        <p>Pueden ver que todos los paquetes de Angular están aquí.</p>
+        <p>Lo que voy a hacer es abrir la carpeta principal.</p>
+        <p>
+          Y voy a crear un nuevo componente utilizando el comando
+          <code>ng generate component</code>.
+        </p>
+        <p>
+          Pongo la ruta donde quiero que se cree, se creará dentro de src/app.
+        </p>
+        <p>
+          Y pongo el nombre del componente, esto debería crear los diferentes
+          archivos para este componente.
+        </p>
+        <p>Pueden ver que se ha creado.</p>
+        <p>
+          Después de crear el componente de lista, el siguiente paso es ejecutar
+          la aplicación usando <code>ng serve</code>.
+        </p>
+        <p>Ahora espero que cargue...</p>
+        <p>
+          Si lo abro, puedo ver la estructura HTML predeterminada de la
+          aplicación en el navegador.
+        </p>
+        <p>
+          Lo que voy a hacer es eliminar esto y agregar mi componente Lista para
+          mostrar que funciona.
+        </p>
+        <p>
+          Para eso, solo necesito el nombre del componente, que es 'app-lista'.
+        </p>
+        <p>Necesito importarlo en mi app.component.ts.</p>
+        <p>
+          Y luego puedo simplemente agregar el nombre del selector que tenía
+          antes.
+        </p>
+        <p>
+          (Había hecho un copia-pega, y Angular no lo estaba importando
+          automáticamente :v)
+        </p>
+        <p>No sé por qué me está dando un error...</p>
+        <p>Bien, ya está solucionado.</p>
+        <p>Y esto debería mostrar el HTML de mi componente Lista.</p>
+        <p>¡Eso es todo! Gracias por ver el video &lt;3.</p>
+      </section>
+
+      <section id="transcripcion-en" style="display: none">
+        <p>
+          Hello, in this video, I will be initializing a simple Angular
+          application.
+        </p>
+        <p>And I will show the steps I am executing.</p>
+        <p>First, I have a prepared folder to create my application.</p>
+        <p>I will open it with Visual Studio Code.</p>
+        <p>I will open a terminal.</p>
+        <p>
+          And I will run the <code>ng new</code> command from Angular CLI, which
+          is used to create a new Angular application.
+        </p>
+        <p>I will give it a name.</p>
+        <p>
+          Then it will ask me: Do I want to use CSS or SASS? I will choose CSS.
+        </p>
+        <p>Here, I will select: no.</p>
+        <p>Then I have to wait for the packages to install.</p>
+        <p>It will take a while, so I will pause the video.</p>
+        <p>
+          Alright, after the installation is complete, what I am going to do
+          is...
+        </p>
+        <p>You can see that all Angular packages are here.</p>
+        <p>What I will do is open the main folder.</p>
+        <p>
+          And I will create a new component using the
+          <code>ng generate component</code> command.
+        </p>
+        <p>
+          I enter the path where I want it, it will be created inside src/app.
+        </p>
+        <p>
+          And I enter the component name, this should create the different files
+          for this component.
+        </p>
+        <p>You can see it has been created.</p>
+        <p>
+          After creating the list component, the next step is to run the
+          application using <code>ng serve</code>.
+        </p>
+        <p>Now I wait for it to load...</p>
+        <p>
+          If I open it, I can see the default HTML structure of the application
+          in the browser.
+        </p>
+        <p>
+          What I will do is remove this and add my List component to show that
+          it works.
+        </p>
+        <p>For that, I just need the component name, which is 'app-lista'.</p>
+        <p>I need to import it in my app.component.ts.</p>
+        <p>And then I can simply add the selector name I had before.</p>
+        <p>
+          (I had done a copy-paste, and Angular wasn't importing it
+          automatically :v)
+        </p>
+        <p>I don't know why it's giving me an error...</p>
+        <p>Alright, it's fixed now.</p>
+        <p>And this should display the HTML of my List component.</p>
+        <p>That's it! Thanks for watching the video &lt;3.</p>
+      </section>
+    </div>
+
+    <script src="video.js"></script>
+  </body>
+</html>

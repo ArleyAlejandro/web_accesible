@@ -16,14 +16,15 @@
                 <img src="imágenes/Eye_O.png" alt="orange-circle" id="orange-circle">
             </h1>
             <div id="icons">
-                <span class="icon-menu">&#xe9bd;</span>
-                <span class="icon-contrast">&#xe9d5;</span>
+                <span class="icon-menu" role="button" tabindex="0" aria-label="Toggle menu">&#xe9bd;</span>
+                <span class="icon-contrast" role="button" tabindex="0" aria-label="Toggle high contrast mode">&#xe9d5;</span>
             </div>
-            <nav id="nav">
+            <nav id="nav" aria-label="Main Navigation">
                 <ul id="lista">
                     <li><a href="#">HOME</a></li>
                     <li><a href="./clients.html">CLIENTS</a></li>
                     <li><a href="./contact.html">CONTACT US</a></li>
+                    <li><a href="./video.html">VIDEO</a></li>
                 </ul>
             </nav>
         </header>
@@ -49,7 +50,7 @@
             <p>Talk to us if you are looking for business
                 savvy online <br>solutions rather than
                 possibilities of <u>technology</u>. </p>
-            <a href="#">Read More</a>
+            <a href="#" aria-label="Read more about Web Designing">Read More</a>
 
         </section>
         <section class="cards" id="solutions">
@@ -60,7 +61,7 @@
             <p>Talk to us if you are looking for business
                 savvy online <br>solutions rather than
                 possibilities of <u>technology</u>. </p>
-            <a href="#">Read More</a>
+            <a href="#"  aria-label="Read more about Solutions">Read More</a>
 
         </section>
         <section class="cards" id="testimonials">
@@ -71,12 +72,12 @@
             <p>Talk to us if you are looking for business
                 savvy online <br>solutions rather than
                 possibilities of <u>technology</u>. </p>
-            <a href="#">Read More</a>
+            <a href="#" aria-label="Read more about Testimonials">Read More</a>
 
         </section>
         <section id="text">
             <h2>Welcome to Infotech</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pulvinar nisi eu enim facilisis dapibus.
+            <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pulvinar nisi eu enim facilisis dapibus.
                 Duis viverra turpis vitae dui tincidunt eleifend. Etiam sodales, neque in dignissim dictum, dui libero
                 dictum orci, vel cursus felis velit vitae dui. Etiam malesuada viverra est pretium lobortis. Vivamus
                 fermentum,
@@ -84,15 +85,15 @@
                 metus,
                 accumsan at rhoncus id, ultrices et lacus. </p>
             <br>
-            <p>Pellentesque in ligula urna, ac eleifend enim. Aliquam sollicitudin velit eget felis scelerisque
+            <p lang="la">Pellentesque in ligula urna, ac eleifend enim. Aliquam sollicitudin velit eget felis scelerisque
                 tempus. In dictum odio vitae nisl vehicula non tincidunt massa malesuada. Ut sed odio id risus placerat
                 dignissim.</p>
         </section>
         <section id="formulario">
             <h2>Subscribe by Email</h2>
-            <p>Email Address</p>
-            <input type="text"><br>
-            <button>Subscribe</button>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" aria-required="true">
+            <button class="button" aria-label="Subscribe to our newsletter">Subscribe</button>
             <h2>Follow us on</h2>
             <div class="social">
                 <img src="imágenes/Twitter.png" alt="Twitter">
@@ -101,12 +102,11 @@
             </div>
         </section>
         <footer>
-            <nav>
+            <nav aria-label="Footer Navigation">
                 <a href="#">HOME</a>
-                <a href="#">ABOUT US</a>
-                <a href="#">SOLUTIONS</a>
                 <a href="./clients.html">CLIENTS</a>
                 <a href="./contact.html">CONTACT US</a>
+                <a href="./video.html">VIDEO</a>
             </nav>
             <p class="copyright">© Copyright Your <span>Site Name. Dot Com.</span> All Rights Reserved </p>
         </footer>
